@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Google
+import GoogleAPIs
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
@@ -43,6 +44,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
             let givenName = user.profile.givenName
             let familyName = user.profile.familyName
             let email = user.profile.email
+            
+            let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+            
+            let googleLoggedinUser = NSEntityDescription.insertNewObjectForEntityForName("GooglePersonEntity", inManagedObjectContext: managedObjectContext) as! GooglePersonEntity
+            googleLoggedinUser.email = email
+            googleLoggedinUser.familyName = familyName
+            googleLoggedinUser.fullName = fullName
+            googleLoggedinUser.givenName = givenName
+            googleLoggedinUser.userId = userId
+            googleLoggedinUser.tokenID = idToken
+            
+            
             // ...
         } else {
             print("\(error.localizedDescription)")

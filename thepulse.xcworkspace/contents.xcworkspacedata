@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:thepulse/model/GooglePersonEntity+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:thepulse/model/GooglePersonEntity.swift">
+   </FileRef>
+   <FileRef
       location = "group:thepulse.xcodeproj">
    </FileRef>
    <FileRef
