@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import GoogleAPIs
+import Google
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GIDSignInUIDelegate{
+
+    @IBOutlet weak var signInGoogleButton: GIDSignInButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signInSilently()
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,0 +1,21 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+use_frameworks!
+
+target 'thepulse' do
+
+end
+
+target 'thepulseTests' do
+
+end
+
+target 'thepulseUITests' do
+
+end
+
+pod ‘GoogleAPISwiftClient/Blogger’, ‘~>0.4.1’
+pod ‘GoogleAPISwiftClient/YouTube’, ‘~>0.4.1’
+pod ‘Google/SignIn’
+
