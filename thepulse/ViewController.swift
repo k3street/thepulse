@@ -7,18 +7,38 @@
 //
 
 import UIKit
-import GoogleAPIs
+import CoreData
 import Google
 
 class ViewController: UIViewController, GIDSignInUIDelegate{
 
     @IBOutlet weak var signInGoogleButton: GIDSignInButton!
+    @IBOutlet weak var emailLbl: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signInSilently()
+        signInGoogleButton.style = GIDSignInButtonStyle.Wide
+        signInGoogleButton.colorScheme = GIDSignInButtonColorScheme.Dark
+    
+        
+        let fetchRequest = NSFetchRequest(entityName: "GooglePersonEntity")
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        do{
+            
+            let fetchedEntity = try managedObjectContext.executeFetchRequest(fetchRequest) as! [GooglePersonEntity]
+            let email = fetchedEntity.first?.email
+            if (email != " " ){
+                signInGoogleButton.hidden = true
+                emailLbl.text = email
+            }
+            
+            
+        }catch{
+            fatalError("ooooo \(error)")
+        }
     }
 
     override func didReceiveMemoryWarning() {

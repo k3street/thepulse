@@ -15,7 +15,5 @@ target 'thepulseUITests' do
 
 end
 
-pod ‘GoogleAPISwiftClient/Blogger’, ‘~>0.4.1’
-pod ‘GoogleAPISwiftClient/YouTube’, ‘~>0.4.1’
 pod ‘Google/SignIn’
 

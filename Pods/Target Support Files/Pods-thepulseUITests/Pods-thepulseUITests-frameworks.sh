@@ -82,14 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-thepulseUITests/Alamofire.framework"
-  install_framework "Pods-thepulseUITests/GoogleAPIs.framework"
-  install_framework "Pods-thepulseUITests/ObjectMapper.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-thepulseUITests/Alamofire.framework"
-  install_framework "Pods-thepulseUITests/GoogleAPIs.framework"
-  install_framework "Pods-thepulseUITests/ObjectMapper.framework"
-fi

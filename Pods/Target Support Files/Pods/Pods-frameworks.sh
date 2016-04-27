@@ -82,14 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods/Alamofire.framework"
-  install_framework "Pods/GoogleAPIs.framework"
-  install_framework "Pods/ObjectMapper.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods/Alamofire.framework"
-  install_framework "Pods/GoogleAPIs.framework"
-  install_framework "Pods/ObjectMapper.framework"
-fi

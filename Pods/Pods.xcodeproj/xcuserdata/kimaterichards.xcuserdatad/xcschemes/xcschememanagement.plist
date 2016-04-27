@@ -4,21 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>GoogleAPISwiftClient.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ObjectMapper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-thepulse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>138C486131DD9D10DAF365371581036B</key>
+		<key>05F4B8427C78473ED8891BCFEABB73F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4B4E9DC7B5367B224CCB5B69A5E4361E</key>
+		<key>1BA84416B19DF31967CCD7D02D962E49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>789EB8CDC7BBCDFC88ADA5CC17BC8DD4</key>
+		<key>4F3BDAE53C51BCFEC3604F21BA168B3F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AD9734138567B458B1942AAA851506EA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BA8B09840CA8D11DF40211E03EFE9DDB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C5D0B4403BFF43FECD30603F7A30D27A</key>
+		<key>64DB4F82F70916E0725E53218362BD0F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

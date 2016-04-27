@@ -37,8 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
                 withError error: NSError!) {
         if (error == nil) {
-            // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
+
+            let userId = user.userID
             let idToken = user.authentication.idToken // Safe to send to the server
             let fullName = user.profile.name
             let givenName = user.profile.givenName
@@ -54,7 +54,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
             googleLoggedinUser.givenName = givenName
             googleLoggedinUser.userId = userId
             googleLoggedinUser.tokenID = idToken
-            
+            do {
+                try managedObjectContext.save()
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+            }
             
             // ...
         } else {
