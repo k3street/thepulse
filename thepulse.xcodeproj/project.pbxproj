@@ -16,8 +16,9 @@
 		783C67E01CD0120C00FCEF56 /* thepulseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783C67DF1CD0120C00FCEF56 /* thepulseTests.swift */; };
 		783C67EB1CD0120C00FCEF56 /* thepulseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783C67EA1CD0120C00FCEF56 /* thepulseUITests.swift */; };
 		783C67F91CD0228D00FCEF56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 783C67F81CD0228D00FCEF56 /* GoogleService-Info.plist */; };
-		783C67FD1CD0302300FCEF56 /* GooglePersonEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783C67FB1CD0302300FCEF56 /* GooglePersonEntity+CoreDataProperties.swift */; };
-		783C67FE1CD0302300FCEF56 /* GooglePersonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783C67FC1CD0302300FCEF56 /* GooglePersonEntity.swift */; };
+		78F9B9801CD18A4200C7B5C6 /* GooglePersonEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9B97E1CD18A4200C7B5C6 /* GooglePersonEntity+CoreDataProperties.swift */; };
+		78F9B9811CD18A4200C7B5C6 /* GooglePersonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9B97F1CD18A4200C7B5C6 /* GooglePersonEntity.swift */; };
+		78F9B9841CD18CB900C7B5C6 /* LoggedInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F9B9831CD18CB900C7B5C6 /* LoggedInController.swift */; };
 		CC0642AD9D000DE752D58CA8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6380DA452923452FAC13597 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +55,9 @@
 		783C67EA1CD0120C00FCEF56 /* thepulseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thepulseUITests.swift; sourceTree = "<group>"; };
 		783C67EC1CD0120C00FCEF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		783C67F81CD0228D00FCEF56 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		783C67FB1CD0302300FCEF56 /* GooglePersonEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GooglePersonEntity+CoreDataProperties.swift"; path = "model/GooglePersonEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		783C67FC1CD0302300FCEF56 /* GooglePersonEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePersonEntity.swift; path = model/GooglePersonEntity.swift; sourceTree = "<group>"; };
+		78F9B97E1CD18A4200C7B5C6 /* GooglePersonEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GooglePersonEntity+CoreDataProperties.swift"; path = "model/GooglePersonEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		78F9B97F1CD18A4200C7B5C6 /* GooglePersonEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePersonEntity.swift; path = model/GooglePersonEntity.swift; sourceTree = "<group>"; };
+		78F9B9831CD18CB900C7B5C6 /* LoggedInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInController.swift; sourceTree = "<group>"; };
 		9B83561C698AFAAE60680510 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A6380DA452923452FAC13597 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77161FCDFBB3ACA294FA720 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,10 +114,10 @@
 		783C67C61CD0120C00FCEF56 /* thepulse */ = {
 			isa = PBXGroup;
 			children = (
+				78F9B9821CD18C8600C7B5C6 /* controller */,
 				783C67FA1CD0301400FCEF56 /* model */,
 				783C67F81CD0228D00FCEF56 /* GoogleService-Info.plist */,
 				783C67C71CD0120C00FCEF56 /* AppDelegate.swift */,
-				783C67C91CD0120C00FCEF56 /* ViewController.swift */,
 				783C67CB1CD0120C00FCEF56 /* Main.storyboard */,
 				783C67D11CD0120C00FCEF56 /* Assets.xcassets */,
 				783C67D31CD0120C00FCEF56 /* LaunchScreen.storyboard */,
@@ -146,10 +148,19 @@
 		783C67FA1CD0301400FCEF56 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				783C67FB1CD0302300FCEF56 /* GooglePersonEntity+CoreDataProperties.swift */,
-				783C67FC1CD0302300FCEF56 /* GooglePersonEntity.swift */,
+				78F9B97E1CD18A4200C7B5C6 /* GooglePersonEntity+CoreDataProperties.swift */,
+				78F9B97F1CD18A4200C7B5C6 /* GooglePersonEntity.swift */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		78F9B9821CD18C8600C7B5C6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				783C67C91CD0120C00FCEF56 /* ViewController.swift */,
+				78F9B9831CD18CB900C7B5C6 /* LoggedInController.swift */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 		9CEB678265069CC8688DC4A8 /* Frameworks */ = {
@@ -353,9 +364,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				783C67CA1CD0120C00FCEF56 /* ViewController.swift in Sources */,
-				783C67FE1CD0302300FCEF56 /* GooglePersonEntity.swift in Sources */,
+				78F9B9811CD18A4200C7B5C6 /* GooglePersonEntity.swift in Sources */,
+				78F9B9841CD18CB900C7B5C6 /* LoggedInController.swift in Sources */,
 				783C67C81CD0120C00FCEF56 /* AppDelegate.swift in Sources */,
-				783C67FD1CD0302300FCEF56 /* GooglePersonEntity+CoreDataProperties.swift in Sources */,
+				78F9B9801CD18A4200C7B5C6 /* GooglePersonEntity+CoreDataProperties.swift in Sources */,
 				783C67D01CD0120C00FCEF56 /* thepulse.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

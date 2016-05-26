@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 import Google
-import GoogleAPIs
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
@@ -44,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
             let givenName = user.profile.givenName
             let familyName = user.profile.familyName
             let email = user.profile.email
-            
+            let userImageURL = user.profile.imageURLWithDimension(200) 
             let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
             
             let googleLoggedinUser = NSEntityDescription.insertNewObjectForEntityForName("GooglePersonEntity", inManagedObjectContext: managedObjectContext) as! GooglePersonEntity
@@ -54,8 +53,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
             googleLoggedinUser.givenName = givenName
             googleLoggedinUser.userId = userId
             googleLoggedinUser.tokenID = idToken
+            googleLoggedinUser.profileImageUrl = "\(userImageURL)"
             do {
                 try managedObjectContext.save()
+                
+                
             } catch let error as NSError  {
                 print("Could not save \(error), \(error.userInfo)")
             }

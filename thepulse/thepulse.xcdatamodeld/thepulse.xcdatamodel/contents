@@ -5,10 +5,11 @@
         <attribute name="familyName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="givenName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileImageUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tokenID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="GooglePersonEntity" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="GooglePersonEntity" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

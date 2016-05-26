@@ -14,6 +14,8 @@ end
 target 'thepulseUITests' do
 
 end
-
+pod 'Google'
 pod ‘Google/SignIn’
+pod ‘Alamofire’
+
 
